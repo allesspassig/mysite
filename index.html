@@ -11,7 +11,8 @@
 	<body>
 		<h1>allesspassig</h1>
 		<h3><a href="https://allesspassig.github.io/DesmosFractalViewer">DesmosFractalViewer</a></h3><p>This is a static webpage that uses the Desmos graphing calculator to control a Javascript fractal plotter.  It uses the Desmos api to listen for changes in the calculator to redraw the fractal.</p><img src="dfv.jpg" style="width:50vw">
-		<h3>A homotopy from a square to a half circle</h3><div style="width:50vw;height:30vw" id="descalc_squaretocirc"></div>
+		<h3>A homotopy from a square to a half circle</h3><div style="width:50vw;height:30vw" id="descalc_squaretocirc"></div><p>This is a formula that transitions between the points on a square and the points on a half circle.  The polar coordinates of the points are blended linearly.</p>
+
 		<script>
 			descalc_squaretocirc=Desmos.GraphingCalculator(document.getElementById("descalc_squaretocirc"));
 			descalc_squaretocirc.setState({"graph":{"xAxisArrowMode":"NONE","yAxisArrowMode":"NONE",viewport:{xmin:-1.25,xmax:1.25}},"expressions":{"list":[{id:"1",type:"folder",title:"controls",memberIds:{"2":true,"3":true,"4":true},collapsed:true},{id:"2",latex:"i_{ncr}=\\frac1N"},{id:"3",latex:"L=\\left[0,i_{ncr}...,1\\right]"},{id:"4",latex:"P=.5(1-\\cos(\\pi p))"},{id:"5",latex:"N=18"},{id:"6",latex:"T(L-1,t)"},{id:"7",latex:"T(t-1,L)"},{id:"8",latex:"T(x,y)=\\sqrt{x^2+y^2}(1-P+P\\cos(\\mod(\\arctan(y,x)+\\frac{\\pi}4,\\frac{\\pi}2)-\\frac{\\pi}4))(\\cos((1+P)(\\arctan(y,x)-\\pi)+\\pi),\\sin((1+P)(\\arctan(y,x)-\\pi)+\\pi))".replaceAll("(","\\left(").replaceAll(")","\\right)")},{id:"9",latex:"p=0"}]}});
